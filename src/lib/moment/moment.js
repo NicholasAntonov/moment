@@ -30,6 +30,7 @@ function createInZone () {
     if (offset) {
         return createLocal
             .apply(null, Array.prototype.slice.call(arguments, 0, arguments.length - 1))
+            .add(offset, 'minutes')
             .utcOffset(offset);
     }
 
