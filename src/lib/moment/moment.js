@@ -13,10 +13,11 @@ function createUnix (input) {
 }
 
 function createInZone () {
-    var offsetRegex = /^(\-)?(\d{2}):?(\d{2})?$/;
+    var offsetRegex = /^([\+\-])?(\d{2}):?(\d{2})?$/;
     var last = arguments[arguments.length - 1];
     var match = null;
     var offset = null;
+
 
     if (isNumber(last)) {
         offset = last;
